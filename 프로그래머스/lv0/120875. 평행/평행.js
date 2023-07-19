@@ -1,17 +1,3 @@
-
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
 function solution(dots) {
     if (calculateSlope(dots[0], dots[1]) === calculateSlope(dots[2], dots[3]))
         return 1;
