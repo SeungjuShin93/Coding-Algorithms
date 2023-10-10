@@ -16,7 +16,7 @@ arr.sort((a, b) => {
 });
 
 let result = "";
-for (let i = 0; i < N; i++) {
-  result += `${arr[i].x} ${arr[i].y}\n`;
+for (let item of arr) {
+  result += `${item.x} ${item.y}\n`;
 }
 console.log(result.trim());
