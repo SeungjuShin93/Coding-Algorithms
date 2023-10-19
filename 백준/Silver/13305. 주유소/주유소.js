@@ -4,7 +4,7 @@ var input = fs.readFileSync("/dev/stdin").toString().split("\n");
 let n = Number(input[0]);
 let km = input[1].split(" ").map(Number);
 let price = input[2].split(" ").map(Number);
-let sum = 0;
+let sum = BigInt(0);
 let sortedPrice = [price[0]];
 for (let i = 1; i < price.length; i++) {
   if (price[i - 1] < price[i]) {
@@ -14,6 +14,6 @@ for (let i = 1; i < price.length; i++) {
 }
 
 for (let i = 0; i < n - 1; i++) {
-  sum += km[i] * price[i];
+  sum += BigInt(km[i]) * BigInt(price[i]);
 }
-console.log(sum);
+console.log(String(sum));
