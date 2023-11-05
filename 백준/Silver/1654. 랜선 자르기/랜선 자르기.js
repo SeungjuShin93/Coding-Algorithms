@@ -10,6 +10,7 @@ let maxLength = 0;
 
 let start = 0;
 let end = arr.reduce((a, b) => Math.max(a, b));
+
 while (start <= end) {
   let cnt = 0;
   let mid = parseInt((start + end) / 2);
@@ -18,11 +19,9 @@ while (start <= end) {
   }
   if (cnt < N) {
     end = mid - 1;
-  }
-  else {
+  } else {
     maxLength = mid;
     start = mid + 1;
   }
 }
-
 console.log(maxLength);
